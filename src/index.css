@@ -1,0 +1,319 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primary: rgb(170, 220, 224);
+  --color-secondary: rgb(110, 157, 233);
+  --color-tertiary:rgb(21, 46, 234);
+  --color-quarternary: white;
+}
+
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 2rem;
+}
+
+#root {
+  width: 600px;
+  height: 600px;
+  background-color: var(--color-quarternary);
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Navbar */
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 96%;
+  padding: 1.5% 5%;
+  background-color: var(--color-secondary);
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.5);
+}
+    nav .logo {
+      width: 50%;
+    }
+    nav .nav-links {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 30%;
+    }
+        nav .nav-links .nav-link {
+          list-style: none;
+          transition: 0.2s linear;
+        }
+        nav .nav-links .nav-link:hover {
+          transform: scale(1.2);
+          color: black;
+          transition: 0.2s linear;
+        }
+            nav .nav-links .nav-link .link {
+              text-decoration: none;
+              color: white;
+            }
+
+/* Search Form */
+
+.search-form form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2%;
+  margin: 2%;
+  padding: 2% 0;
+  border-radius: 2%;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+}
+    .search-form input {
+      font-size: 2rem;
+      width: 30%;
+    }
+
+/* About */
+
+.about-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 40rem;
+  height: 60rem;
+}
+    .about-section-title {
+      font-size: 3rem;
+      margin: 10%;
+      margin-top: -5%;
+    }
+    .about-section-text {
+      font-size: 2.5rem;
+      line-height: 3.5rem;
+      text-align: justify;
+    }
+
+/* Error */
+
+.error-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 60rem;
+  height: 60rem;
+}
+    .error-section-title {
+      font-size: 3rem;
+      margin: 15%;
+      margin-top: -25%;
+    }
+    .error-section-button {
+      font-size: 3rem;
+      padding: 5%;
+      border-radius: 10%;      
+      text-decoration: none;
+      color: black;
+      background-color: var(--color-primary);
+      transition: 0.2s linear;
+    }
+    .error-section-button:hover {
+      font-size: 3rem;
+      padding: 5%;
+      border-radius: 10%;
+      text-decoration: none;
+      color: white;
+      background-color: var(--color-secondary);
+      transition: 0.2s linear;
+    }
+
+/* Cocktail List */
+
+.cocktail-list-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+    .cocktail-list-title {
+      font-size: 2rem;
+      text-align: center;
+      margin-top: 10%;
+    }
+    .cocktail-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 2%;
+      padding: 2%;
+    }
+
+/* Cocktail */
+
+.cocktail {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  border-radius: 5%;
+  padding: 0;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+  
+}
+    .cocktail .img-container {
+      height: 100%;
+    }
+    .cocktail img {
+      width: 100%;      
+      border-top-left-radius: 5%;
+      border-top-right-radius: 5%;
+      object-fit: cover;
+    }
+    .cocktail .name {
+      margin: 4%;
+      color: var(--color-secondary);
+    }
+    .cocktail .glass, .cocktail .info {
+      font-size: 1.5rem;
+      margin-left: 4%;
+    }
+    .cocktail .button {
+      font-size: 1.5rem;
+      margin: 5% 4%;
+      padding: 5%;
+      border-radius: 10%;
+      text-decoration: none;
+      color: black;
+      background-color: var(--color-primary);
+      transition: 0.2s linear;
+    }
+    .cocktail .button:hover {      
+      color: white;
+      background-color: var(--color-secondary);
+      transition: 0.2s linear;
+    }
+
+/* Cocktail Details */
+
+.cocktail-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3%;
+}
+    .details-title {
+      margin-bottom: 5%;
+      color: var(--color-secondary);
+    }
+    .details-container{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5%;
+    }        
+        .details-container img {
+          width: 50%;
+          border-radius: 10%;
+        }
+        .details-info-container {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: center;
+          gap: 15%;
+        }
+            .details-info-container span {
+              font-size: 1.8rem;
+              margin-top: 3%;
+              margin-right: 1rem;
+              padding: 0 2%;
+              border-radius: 10%;
+              background-color: var(--color-primary);
+            }
+            .details-info-container p {
+              text-align: justify;
+              font-size: 1.8rem;
+              margin-top: 10%;
+              width: 20rem;
+            }
+            .details-info-container .ingredient {
+              text-align: justify;
+              font-size: 1.8rem;
+              margin-top: 3%;
+              width: 20rem;
+            }
+            .cocktail-details .button {
+              font-size: 1.5rem;
+              margin: 5% 4%;
+              padding: 2%;
+              border-radius: 10%;
+              text-decoration: none;
+              color: black;
+              background-color: var(--color-primary);
+              transition: 0.2s linear;
+            }
+
+            .cocktail-details .button:hover {
+              color: white;
+              background-color: var(--color-secondary);
+              transition: 0.2s linear;
+            }
+
+/* @media  */
+
+@media (max-width: 1024px) {
+  #root {
+    width: 560px;
+    height: 560px;
+  }
+
+  html {
+    font-size: 7px;
+  }  
+
+}
+@media (max-width: 768px) {
+  #root {
+    width: 420px;
+    height: 420px;
+  }
+  .cocktail-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 576px) {
+  #root {
+    width: 350px;
+    height: 350px;
+  }
+
+  html {
+    font-size: 6px;
+  }
+}
+@media (max-width: 425px) {
+  #root {
+    width: 240px;
+    height: 240px;
+  }
+
+  html {
+    font-size: 4px;
+  }
+}
